@@ -23,7 +23,7 @@ const mailOptions = { // Define informações pertinentes ao E-mail que será en
 
 const sendEmail = (email, tokenVerificacao) => {
     mailOptions.to = email
-    mailOptions.text = `Link de confirmação ->  http://localhost:3000/verify/${tokenVerificacao}   token -> ${tokenVerificacao}`
+    mailOptions.text = `Link de confirmação ->  https://incodde-workstation-frontend.herokuapp.com/verify/${tokenVerificacao}   token -> ${tokenVerificacao}`
     transporter.sendMail(mailOptions, (err, info) => { // Função que, efetivamente, envia o email.
         if (err) {
             return console.log(err)

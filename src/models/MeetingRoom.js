@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+
+//model de uma sala de reuniao
 const meetingRoomSchema = new mongoose.Schema({
     nome: {
         type: String, 
