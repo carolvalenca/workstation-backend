@@ -37,9 +37,9 @@ module.exports = {
         
         //checa se o horario disponivel ta ocupado
         if (sala.horariosOcupados.indexOf(horarioDesejado) !== -1) {
-            return res.send('Horário indisponível')
+            return res.status(400).send('Horário indisponível')
         }
-        
+
         //torna o horario desejado da reuniao antes disponivel em ocupado
         sala.horariosDisp = sala.horariosDisp.filter(horario => horario !== horarioDesejado)
         sala.horariosOcupados.push(horarioDesejado)
